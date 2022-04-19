@@ -1,1 +1,1 @@
-# StudentManagementSyatem
+# StudentManagementSystem
