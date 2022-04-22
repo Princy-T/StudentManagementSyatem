@@ -1,4 +1,4 @@
-package studentmanagementsystem;
+package studentManagementSystem;
 import java.util.Scanner;
 public class Main {
 
