@@ -15,13 +15,13 @@ public class Student {
 	public Student()
 	{
 		Scanner sc = new Scanner(System.in);
-		System.out.print("Enter student First Name: ");
+		logger.log("Enter student First Name: ");
 		this.firstName = sc.nextLine();
 		
-		System.out.print("Enter student Last Name: ");
+		logger.log("Enter student Last Name: ");
 		this.lastName = sc.nextLine();
 		
-		System.out.print(" 1 - Freshmen \n 2 - Junior \n 3 - Senior \n Enter Student Year: ");
+		logger.log(" 1 - Freshmen \n 2 - Junior \n 3 - Senior \n Enter Student Year: ");
 		this.year = sc.nextInt();
 		
 		setStudentID();
@@ -36,7 +36,7 @@ public class Student {
 	public void enroll()
 	{
 		do {
-			System.out.print("Enter course to enroll (Q to quit):");
+			logger.log("Enter course to enroll (Q to quit):");
 			Scanner sc = new Scanner(System.in);
 			String course = sc.nextLine();
 			if(!course.equals("Q"))
@@ -54,18 +54,18 @@ public class Student {
 	// view balance
 	public void viewBalance()
 	{
-		System.out.println("Amount to be paid: $" + tuitionBalance);
-		System.out.println("------------");
+		logger.log("Amount to be paid: $" + tuitionBalance);
+		logger.log("------------");
 	}
 	// payment 
 	public void payTuition()
 	{
 		viewBalance();
-		System.out.print("Enter the amount to pay for the courses: $");
+		logger.log("Enter the amount to pay for the courses: $");
 		Scanner sc =new Scanner(System.in);
 		int payment = sc.nextInt();
 		tuitionBalance = tuitionBalance - payment;
-		System.out.println("Thankyou for your payment of $" + payment);
+		logger.log("Thankyou for your payment of $" + payment);
 		viewBalance();
 	}
 	// status information
