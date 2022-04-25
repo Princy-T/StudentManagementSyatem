@@ -27,7 +27,7 @@ public class Student {
 		setStudentID();
 	}
 	//Generate an ID
-	private void setStudentID()
+	private static void setStudentID()
 	{
 		id++;
 		this.studentID = year + " " + id;
